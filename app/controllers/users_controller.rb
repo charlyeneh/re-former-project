@@ -1,7 +1,26 @@
 class UsersController < ApplicationController
-  def new    
+  def new
+    @user = User.new 
   end
   
-  def create    
+  def create
+    @user = User.new(user_params) 
+    # @user = User.new(username: params[:username], email: params[:email], password: params[:password])   
+    if @user.save
+      # flash.now[:success] = "Congratulations! Your user has been created"
+      redirect_to new_user_path
+    else
+      # flash.now[error] = "Failed! Fix your mistake and try again"
+      render :new
+    end
   end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:username, :email, :password)
+  end
+  # def form_authenticity_token
+  #   session[:_csrf_token] ||= SecureRandom.base64(32)
+  # end
 end
