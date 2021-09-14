@@ -7,10 +7,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     # @user = User.new(username: params[:username], email: params[:email], password: params[:password])
     if @user.save
-      # flash.now[:success] = "Congratulations! Your user has been created"
       redirect_to new_user_path
     else
-      # flash.now[error] = "Failed! Fix your mistake and try again"
       render :new
     end
   end

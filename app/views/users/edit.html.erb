@@ -1,4 +1,6 @@
-<h1>Edit User</h1>
+<div class="d-flex align-items-left justify-content-left mt-4 ml-4">
+  <h1>Edit User</h1>
+</div>
 
 <%# <form action="/users" method="Post" accept-charset="UTF-8">
   <label for="username">Username</label><br/>
@@ -29,9 +31,9 @@
   <%if @user.errors.any?%>
     <div>
       <% @user.errors.full_messages.each do |message| %>
-        <div><%=message%> </div>
+        <div class="alert alert-danger"><%=message%> </div>
       <%end%>
-    </div><br/><br/>
+    </div>
   <%end%>
   <%= form.label :username, "Username:" %>
   <%= form.text_field :username, placeholder: "Edit your username here"%><br/><br/>
