@@ -26,11 +26,18 @@
 <%# <!-- Rails Form_with  --> %>
 
 <%= form_with(model: @user) do |form| %>
+  <%if @user.errors.any?%>
+    <div>
+      <% @user.errors.full_messages.each do |message| %>
+        <div><%=message%> </div>
+      <%end%>
+    </div>
+  <%end%><br/><br/>
   <%= form.label :username, "Username:" %>
-  <%= form.text_field :username, placeholder: "Enter your username here"%>
+  <%= form.text_field :username, placeholder: "Enter your username here"%><br/><br/>
   <%= form.label :email, "Email:" %>
-  <%= form.text_field :email, placeholder: "example@example.com"%>
+  <%= form.text_field :email, placeholder: "example@example.com"%><br/><br/>
   <%= form.label :password, "Password:" %>
-  <%= form.password_field :password, placeholder: "Enter your password here"%>
+  <%= form.password_field :password, placeholder: "Enter your password here"%><br/><br/>
   <%= form.submit "Submit" %>
 <%end%>
