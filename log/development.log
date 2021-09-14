@@ -6710,3 +6710,456 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 4259)
 
 
+Started GET "/users/new" for ::1 at 2021-09-14 01:06:35 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1828)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.4ms | Allocations: 8074)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Sign Up</h1>
+
+<%# <form action="/users" method="Post" accept-charset="UTF-8">
+  <label for="username">Username</label><br/>
+  <input type="text" id="username" name="user[username]" placeholder="username"><br/><br/>
+  <label for="email">Email</label><br/>
+  <input type="email" id="email" name="user[email]" placeholder="email"><br/><br/>
+  <label for="password">Password</label><br/>
+  <input type="password" id="password" name="user[password]" placeholder="password" required><br/><br/>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token">
+  <input type="submit" value="submit">
+</form> %>
+
+<!-- Rails Form_tag  -->
+
+<%# <%= form_tag("/users", method: "POST") do %>
+  <%# <%= label_tag("user[username]", "username:") %>
+  <%# <%= text_field_tag("user[username]") %>
+  <%# <%= label_tag("user[email]", "email:") %>
+  <%# <%= email_field_tag("user[email]") %>
+  <%# <%= label_tag("user[password]", "password:") %> 
+  <%# <%= password_field_tag("user[password") %>
+  <%# <%= submit_tag("Submit") %>
+<%# <% end %>
+
+<!-- Rails Form_with  -->
+
+<%=Form_with model: @user, do |form| %>
+  <%= form.label :username, "Username:" %>
+  <%= form.text_field :username, placeholder: "Enter your username here"%>
+  <%= form.label :email, "Email:" %>
+  <%= form.text_field :email, placeholder: "example@example.com"%>
+  <%= form.label :password, "password:" %>
+  <%= form.text_field :password, placeholder: "Enter your password here"%>
+  <%= form.submit "Submit" %>
+<%end%>
+):
+1:    <h1>Sign Up</h1>
+2:    
+3:    <%# <form action="/users" method="Post" accept-charset="UTF-8">
+4:      <label for="username">Username</label><br/>
+5:      <input type="text" id="username" name="user[username]" placeholder="username"><br/><br/>
+6:      <label for="email">Email</label><br/>
+7:      <input type="email" id="email" name="user[email]" placeholder="email"><br/><br/>
+8:      <label for="password">Password</label><br/>
+9:      <input type="password" id="password" name="user[password]" placeholder="password" required><br/><br/>
+10:      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token">
+11:      <input type="submit" value="submit">
+12:    </form> %>
+13:    
+14:    <!-- Rails Form_tag  -->
+15:    
+16:    <%# <%= form_tag("/users", method: "POST") do %>
+17:      <%# <%= label_tag("user[username]", "username:") %>
+18:      <%# <%= text_field_tag("user[username]") %>
+19:      <%# <%= label_tag("user[email]", "email:") %>
+20:      <%# <%= email_field_tag("user[email]") %>
+21:      <%# <%= label_tag("user[password]", "password:") %> 
+22:      <%# <%= password_field_tag("user[password") %>
+23:      <%# <%= submit_tag("Submit") %>
+24:    <%# <% end %>
+25:    
+26:    <!-- Rails Form_with  -->
+27:    
+28:    <%=Form_with model: @user, do |form| %>
+29:      <%= form.label :username, "Username:" %>
+30:      <%= form.text_field :username, placeholder: "Enter your username here"%>
+31:      <%= form.label :email, "Email:" %>
+32:      <%= form.text_field :email, placeholder: "example@example.com"%>
+33:      <%= form.label :password, "password:" %>
+34:      <%= form.text_field :password, placeholder: "Enter your password here"%>
+35:      <%= form.submit "Submit" %>
+36:    <%end%>
+  
+app/views/users/new.html.erb:28: syntax error, unexpected `do' for block
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected `do' for block
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected `do' for block
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected `do' for block
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected `do' for block
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected `do' for block
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+Started GET "/users/new" for ::1 at 2021-09-14 01:07:20 +0100
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1350)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1416)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2620)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Sign Up</h1>
+
+<%# <form action="/users" method="Post" accept-charset="UTF-8">
+  <label for="username">Username</label><br/>
+  <input type="text" id="username" name="user[username]" placeholder="username"><br/><br/>
+  <label for="email">Email</label><br/>
+  <input type="email" id="email" name="user[email]" placeholder="email"><br/><br/>
+  <label for="password">Password</label><br/>
+  <input type="password" id="password" name="user[password]" placeholder="password" required><br/><br/>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token">
+  <input type="submit" value="submit">
+</form> %>
+
+<!-- Rails Form_tag  -->
+
+<%# <%= form_tag("/users", method: "POST") do %>
+  <%# <%= label_tag("user[username]", "username:") %>
+  <%# <%= text_field_tag("user[username]") %>
+  <%# <%= label_tag("user[email]", "email:") %>
+  <%# <%= email_field_tag("user[email]") %>
+  <%# <%= label_tag("user[password]", "password:") %> 
+  <%# <%= password_field_tag("user[password") %>
+  <%# <%= submit_tag("Submit") %>
+<%# <% end %>
+
+<!-- Rails Form_with  -->
+
+<%=Form_with (model: @user) do |form| %>
+  <%= form.label :username, "Username:" %>
+  <%= form.text_field :username, placeholder: "Enter your username here"%>
+  <%= form.label :email, "Email:" %>
+  <%= form.text_field :email, placeholder: "example@example.com"%>
+  <%= form.label :password, "password:" %>
+  <%= form.text_field :password, placeholder: "Enter your password here"%>
+  <%= form.submit "Submit" %>
+<%end%>
+):
+1:    <h1>Sign Up</h1>
+2:    
+3:    <%# <form action="/users" method="Post" accept-charset="UTF-8">
+4:      <label for="username">Username</label><br/>
+5:      <input type="text" id="username" name="user[username]" placeholder="username"><br/><br/>
+6:      <label for="email">Email</label><br/>
+7:      <input type="email" id="email" name="user[email]" placeholder="email"><br/><br/>
+8:      <label for="password">Password</label><br/>
+9:      <input type="password" id="password" name="user[password]" placeholder="password" required><br/><br/>
+10:      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token">
+11:      <input type="submit" value="submit">
+12:    </form> %>
+13:    
+14:    <!-- Rails Form_tag  -->
+15:    
+16:    <%# <%= form_tag("/users", method: "POST") do %>
+17:      <%# <%= label_tag("user[username]", "username:") %>
+18:      <%# <%= text_field_tag("user[username]") %>
+19:      <%# <%= label_tag("user[email]", "email:") %>
+20:      <%# <%= email_field_tag("user[email]") %>
+21:      <%# <%= label_tag("user[password]", "password:") %> 
+22:      <%# <%= password_field_tag("user[password") %>
+23:      <%# <%= submit_tag("Submit") %>
+24:    <%# <% end %>
+25:    
+26:    <!-- Rails Form_with  -->
+27:    
+28:    <%=Form_with (model: @user) do |form| %>
+29:      <%= form.label :username, "Username:" %>
+30:      <%= form.text_field :username, placeholder: "Enter your username here"%>
+31:      <%= form.label :email, "Email:" %>
+32:      <%= form.text_field :email, placeholder: "example@example.com"%>
+33:      <%= form.label :password, "password:" %>
+34:      <%= form.text_field :password, placeholder: "Enter your password here"%>
+35:      <%= form.submit "Submit" %>
+36:    <%end%>
+  
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+Started GET "/users/new" for ::1 at 2021-09-14 01:08:10 +0100
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1350)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1416)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2499)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Sign Up</h1>
+
+<%# <form action="/users" method="Post" accept-charset="UTF-8">
+  <label for="username">Username</label><br/>
+  <input type="text" id="username" name="user[username]" placeholder="username"><br/><br/>
+  <label for="email">Email</label><br/>
+  <input type="email" id="email" name="user[email]" placeholder="email"><br/><br/>
+  <label for="password">Password</label><br/>
+  <input type="password" id="password" name="user[password]" placeholder="password" required><br/><br/>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token">
+  <input type="submit" value="submit">
+</form> %>
+
+<!-- Rails Form_tag  -->
+
+<%# <%= form_tag("/users", method: "POST") do %>
+  <%# <%= label_tag("user[username]", "username:") %>
+  <%# <%= text_field_tag("user[username]") %>
+  <%# <%= label_tag("user[email]", "email:") %>
+  <%# <%= email_field_tag("user[email]") %>
+  <%# <%= label_tag("user[password]", "password:") %> 
+  <%# <%= password_field_tag("user[password") %>
+  <%# <%= submit_tag("Submit") %>
+<%# <% end %>
+
+<!-- Rails Form_with  -->
+
+<%= form_with (model: @user) do |form| %>
+  <%= form.label :username, "Username:" %>
+  <%= form.text_field :username, placeholder: "Enter your username here"%>
+  <%= form.label :email, "Email:" %>
+  <%= form.text_field :email, placeholder: "example@example.com"%>
+  <%= form.label :password, "password:" %>
+  <%= form.text_field :password, placeholder: "Enter your password here"%>
+  <%= form.submit "Submit" %>
+<%end%>
+):
+1:    <h1>Sign Up</h1>
+2:    
+3:    <%# <form action="/users" method="Post" accept-charset="UTF-8">
+4:      <label for="username">Username</label><br/>
+5:      <input type="text" id="username" name="user[username]" placeholder="username"><br/><br/>
+6:      <label for="email">Email</label><br/>
+7:      <input type="email" id="email" name="user[email]" placeholder="email"><br/><br/>
+8:      <label for="password">Password</label><br/>
+9:      <input type="password" id="password" name="user[password]" placeholder="password" required><br/><br/>
+10:      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token">
+11:      <input type="submit" value="submit">
+12:    </form> %>
+13:    
+14:    <!-- Rails Form_tag  -->
+15:    
+16:    <%# <%= form_tag("/users", method: "POST") do %>
+17:      <%# <%= label_tag("user[username]", "username:") %>
+18:      <%# <%= text_field_tag("user[username]") %>
+19:      <%# <%= label_tag("user[email]", "email:") %>
+20:      <%# <%= email_field_tag("user[email]") %>
+21:      <%# <%= label_tag("user[password]", "password:") %> 
+22:      <%# <%= password_field_tag("user[password") %>
+23:      <%# <%= submit_tag("Submit") %>
+24:    <%# <% end %>
+25:    
+26:    <!-- Rails Form_with  -->
+27:    
+28:    <%= form_with (model: @user) do |form| %>
+29:      <%= form.label :username, "Username:" %>
+30:      <%= form.text_field :username, placeholder: "Enter your username here"%>
+31:      <%= form.label :email, "Email:" %>
+32:      <%= form.text_field :email, placeholder: "example@example.com"%>
+33:      <%= form.label :password, "password:" %>
+34:      <%= form.text_field :password, placeholder: "Enter your password here"%>
+35:      <%= form.submit "Submit" %>
+36:    <%end%>
+  
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+Started GET "/users/new" for ::1 at 2021-09-14 01:08:48 +0100
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1378)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1444)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2527)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Sign Up</h1>
+
+<%# <form action="/users" method="Post" accept-charset="UTF-8">
+  <label for="username">Username</label><br/>
+  <input type="text" id="username" name="user[username]" placeholder="username"><br/><br/>
+  <label for="email">Email</label><br/>
+  <input type="email" id="email" name="user[email]" placeholder="email"><br/><br/>
+  <label for="password">Password</label><br/>
+  <input type="password" id="password" name="user[password]" placeholder="password" required><br/><br/>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token">
+  <input type="submit" value="submit">
+</form> %>
+
+<%# <!-- Rails Form_tag  --> %>
+
+<%# <%= form_tag("/users", method: "POST") do %>
+  <%# <%= label_tag("user[username]", "username:") %>
+  <%# <%= text_field_tag("user[username]") %>
+  <%# <%= label_tag("user[email]", "email:") %>
+  <%# <%= email_field_tag("user[email]") %>
+  <%# <%= label_tag("user[password]", "password:") %> 
+  <%# <%= password_field_tag("user[password") %>
+  <%# <%= submit_tag("Submit") %>
+<%# <% end %>
+
+<%# <!-- Rails Form_with  --> %>
+
+<%= form_with (model: @user) do |form| %>
+  <%= form.label :username, "Username:" %>
+  <%= form.text_field :username, placeholder: "Enter your username here"%>
+  <%= form.label :email, "Email:" %>
+  <%= form.text_field :email, placeholder: "example@example.com"%>
+  <%= form.label :password, "password:" %>
+  <%= form.text_field :password, placeholder: "Enter your password here"%>
+  <%= form.submit "Submit" %>
+<%end%>
+):
+1:    <h1>Sign Up</h1>
+2:    
+3:    <%# <form action="/users" method="Post" accept-charset="UTF-8">
+4:      <label for="username">Username</label><br/>
+5:      <input type="text" id="username" name="user[username]" placeholder="username"><br/><br/>
+6:      <label for="email">Email</label><br/>
+7:      <input type="email" id="email" name="user[email]" placeholder="email"><br/><br/>
+8:      <label for="password">Password</label><br/>
+9:      <input type="password" id="password" name="user[password]" placeholder="password" required><br/><br/>
+10:      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token">
+11:      <input type="submit" value="submit">
+12:    </form> %>
+13:    
+14:    <%# <!-- Rails Form_tag  --> %>
+15:    
+16:    <%# <%= form_tag("/users", method: "POST") do %>
+17:      <%# <%= label_tag("user[username]", "username:") %>
+18:      <%# <%= text_field_tag("user[username]") %>
+19:      <%# <%= label_tag("user[email]", "email:") %>
+20:      <%# <%= email_field_tag("user[email]") %>
+21:      <%# <%= label_tag("user[password]", "password:") %> 
+22:      <%# <%= password_field_tag("user[password") %>
+23:      <%# <%= submit_tag("Submit") %>
+24:    <%# <% end %>
+25:    
+26:    <%# <!-- Rails Form_with  --> %>
+27:    
+28:    <%= form_with (model: @user) do |form| %>
+29:      <%= form.label :username, "Username:" %>
+30:      <%= form.text_field :username, placeholder: "Enter your username here"%>
+31:      <%= form.label :email, "Email:" %>
+32:      <%= form.text_field :email, placeholder: "example@example.com"%>
+33:      <%= form.label :password, "password:" %>
+34:      <%= form.text_field :password, placeholder: "Enter your password here"%>
+35:      <%= form.submit "Submit" %>
+36:    <%end%>
+  
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/users/new.html.erb:28: syntax error, unexpected tLABEL, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+Started GET "/users/new" for ::1 at 2021-09-14 01:11:35 +0100
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 92.6ms | Allocations: 3128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 116.9ms | Allocations: 8047)
+Completed 200 OK in 123ms (Views: 120.9ms | ActiveRecord: 0.0ms | Allocations: 9154)
+
+
+Started GET "/users/new" for ::1 at 2021-09-14 01:12:51 +0100
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 841)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 3997)
+Completed 200 OK in 27ms (Views: 24.4ms | Allocations: 5094)
+
+
+Started GET "/users/new" for ::1 at 2021-09-14 01:13:40 +0100
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 94.7ms | Allocations: 2691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 107.8ms | Allocations: 5733)
+Completed 200 OK in 114ms (Views: 111.7ms | Allocations: 6828)
+
+
+Started POST "/users" for ::1 at 2021-09-14 01:13:57 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Atef222", "email"=>"Atef@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (14.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Atef222"], ["email", "Atef@yahoo.com"], ["password", "12333333"], ["created_at", "2021-09-14 00:13:57.844487"], ["updated_at", "2021-09-14 00:13:57.844487"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (224.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 269ms (ActiveRecord: 239.1ms | Allocations: 5594)
+
+
+Started GET "/users/new" for ::1 at 2021-09-14 01:13:58 +0100
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 444)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 3411)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 3801)
+
+
+Started GET "/users/new" for ::1 at 2021-09-14 10:53:50 +0100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 57.1ms | Allocations: 1394)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 367.3ms | Allocations: 6403)
+Completed 200 OK in 830ms (Views: 577.7ms | ActiveRecord: 1.4ms | Allocations: 12624)
+
+
